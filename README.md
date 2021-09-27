@@ -1,2 +1,2 @@
 # SPRINT-C
-Un arreglo global en donde se almacenen cada uno de los registros. Se almacenarán tantos registros como la cantidad de veces que se haya enviado el formulario.
+La información contenida en esta presentación es de carácter pedagógico, el material presentado obedece a situaciones que simulan el desarrollo de un proyecto en un entorno organizacional a partir de una metodología ágil como lo es SCRUM.
