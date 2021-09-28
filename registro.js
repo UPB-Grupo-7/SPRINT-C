@@ -48,11 +48,12 @@ function filtrarPorContrasena(arreglo, filtro){
     let newRegistro = [];
 
     for (var i=0; i<arreglo.length; i++){
-        
-        if(arreglo(i,1).length <= filtro){
-        newRegistro.push(arreglo(i,1));
-        console.log(newRegistro);}
-   }
+
+        if(arreglo[i][1].length <= filtro){
+        newRegistro.push(arreglo[i][1]);
+        }
+    }
+    console.log(newRegistro);
 }
 
 module.export.registros = registros;
