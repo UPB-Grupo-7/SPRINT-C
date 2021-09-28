@@ -29,7 +29,7 @@ function agregarRegistro(){
             validarContrasena = true;
         }
         else{
-            console.log("Usuario no tiene info")
+            console.log("Contrasena no tiene info")
         }
 
     }
