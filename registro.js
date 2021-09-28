@@ -1,26 +1,47 @@
 let registro = [];
-usuario = document.getElementById('in_usuario').value
-contrasena = document.getElementById('in_contrasena').value
-
 
 function agregarRegistro(){
-
-    //VALIDACIÓN
-   /* const ptr = new RegExp('^[A-Z0-9Ñ]+$', 'i');
-    if (usuario.length < 3 || usuario.length > 9  && contrasena.length < 6) {
-        console.log("longitud");
-    } else if (!ptr.test(string)) {
-        console.log("caracteres");
+    let persona = [];
+    usuario = document.getElementById('in_usuario').value;
+    contrasena = document.getElementById('in_contrasena').value;
+    validarUsuario = false;
+    validarContrasena = false;
+    const ptr = new RegExp('^[A-Z0-9Ñ]+$', 'i');
+    if (usuario.length < 3 || usuario.length > 9) {
+        console.log("Usuario no tiene la longitud");
+    } else if (!ptr.test(usuario)) {
+        console.log("Usuario usa caracteres especiales");
     } else {
-        let persona = [usuario,contrasena]
+        if(usuario != ""){
+            validarUsuario = true;
+        }
+        else{
+            console.log("Usuario no tiene info")
+        }
+
+    }
+    if (contrasena.length < 6) {
+        console.log("Contrasena no tiene la longitud");
+    } else if (!ptr.test(contrasena)) {
+        console.log("Contrasena tiene caracteres especiales");
+    } else {
+        if(contrasena != ""){
+            validarContrasena = true;
+        }
+        else{
+            console.log("Usuario no tiene info")
+        }
+
+    }
+    if(validarUsuario == true && validarContrasena == true){
+        persona.push(usuario, contrasena);
         registro.push(persona);
         console.log(persona);
-    }*/
-    registro.push(usuario);
+        console.log(registro);
+    }
 
 }
 
-agregarRegistro()
 
 function filtrarPorContrasena(arreglo, filtro){
 
