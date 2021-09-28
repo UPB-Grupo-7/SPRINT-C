@@ -16,7 +16,7 @@ function agregarRegistro(){
         registro.push(persona);
         console.log(persona);
     }*/
-    registro.push(persona);
+    registro.push(usuario);
 
 }
 
