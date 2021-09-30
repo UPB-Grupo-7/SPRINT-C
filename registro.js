@@ -1,4 +1,4 @@
-let registro = [];
+let registros = [];
 
 function agregarRegistro(){
     let persona = [];
@@ -29,15 +29,15 @@ function agregarRegistro(){
             validarContrasena = true;
         }
         else{
-            console.log("Contrasena no tiene info")
+            console.log("Usuario no tiene info")
         }
 
     }
     if(validarUsuario == true && validarContrasena == true){
-        persona.push(usuario, contrasena);
-        registro.push(persona);
+        persona = {"usuario" : usuario, "contrasena" : contrasena}
+        registros.push(persona);
         console.log(persona);
-        console.log(registro);
+        console.log(registros);
     }
 
 }
@@ -56,6 +56,6 @@ function filtrarPorContrasena(arreglo, filtro){
     console.log(newRegistro);
 }
 
-module.export.registros = registros;
-module.export.filtrarPorContrasena = filtrarPorContrasena;
-module.export.agregarRegistro = agregarRegistro;
+module.exports.registros = registros;
+module.exports.filtrarPorContrasena = filtrarPorContrasena;
+module.exports.agregarRegistro = agregarRegistro;
