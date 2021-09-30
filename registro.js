@@ -39,22 +39,22 @@ function agregarRegistro(){
         console.log(persona);
         console.log(registros);
     }
-
 }
 
 
-function filtrarPorContrasena(arreglo, filtro){
-
+function filtrarPorContrasena(arreglo,filtro){
     let newRegistro = [];
 
     for (var i=0; i<arreglo.length; i++){
 
-        if(arreglo[i][1].length <= filtro){
-        newRegistro.push(arreglo[i][1]);
+        if(arreglo[i].contrasena.length <= filtro){
+        newRegistro.push(arreglo[i]);
         }
     }
     console.log(newRegistro);
+    return newRegistro;
 }
+
 
 module.exports.registros = registros;
 module.exports.filtrarPorContrasena = filtrarPorContrasena;
